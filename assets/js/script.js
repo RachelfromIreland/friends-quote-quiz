@@ -47,16 +47,3 @@ function displayQuestion() {
 
 };
 
-//Cut and paste this section inside function, not working outside ****REMOVE COMMENT WHEN DONE****
-let answerButtons = document.getElementsByClassName('answer-button');
-for (let answerButton of answerButtons) {
-    answerButton.addEventListener('click', checkAnswer(answerButton.innerText, questionCharacter.friend));
-}
-
-function checkAnswer(userAnswer, answer) {
-    if (userAnswer === answer) {
-        alert(`That's right! ${answer} said that line!`)
-    } else {
-        alert(`Whoops, ${answer} said that line, maybe you need another rewatch of Friends!`)
-    }
-}
