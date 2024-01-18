@@ -14,12 +14,19 @@
         <p>Select which charater you think said these randomly generated quotes.  We'll tally up your score as you go, there are six questions, see if you can get a perfect score!  
         <br>    
         Click the <strong>Start Quiz</strong> button below to begin.</p>
-        <button id="start-button" onclick="showQuiz()">Start Quiz</button>
+        <button id="start-button" class = "start-button" onclick="showQuiz()">Start Quiz</button>
     </div>
 
     <!--  Code for quiz to be displayed after start button is clicked -->
     <div id="quiz">
-        <h1>Here's the quiz!</h1>
+        <h1>Who said this?</h1>
+        <div id="random-quote"></div>
+        <button type="button" id="chandler" class="answer-button">Chandler</button>
+        <button type="button" id="monica" class="answer-button">Monica</button>
+        <button type="button" id="joey" class="answer-button">Joey</button>
+        <button type="button" id="rachel" class="answer-button">Rachel</button>
+        <button type="button" id="phoebe" class="answer-button">Phoebe</button>
+        <button type="button" id="ross" class="answer-button">Ross</button>
     </div>
 
     <script src="assets/js/script.js"></script>
