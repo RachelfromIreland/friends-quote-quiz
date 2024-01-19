@@ -45,12 +45,16 @@ function displayQuestion() {
 
     quoteDiv.innerHTML = randomQuote;
 
+    //Cut and paste this section inside function, not working outside ****REMOVE COMMENT WHEN DONE****
+    let answerButtons = document.getElementsByClassName('answer-button');
+    console.log(answerButtons);
+    for (let answerButton of answerButtons) {
+        console.log(answerButton)
+    answerButton.addEventListener('click', checkAnswer());
+    }
+
 };
-//Cut and paste this section inside function, not working outside ****REMOVE COMMENT WHEN DONE****
-let answerButtons = document.getElementsByClassName('answer-button');
-for (let answerButton of answerButtons) {
-    answerButton.addEventListener('click', checkAnswer(answerButton.innerText, questionCharacter.friend));
-}
+//answerButton.innerText, questionCharacter.friend
 
 function checkAnswer(userAnswer, answer) {
     if (userAnswer === answer) {
@@ -58,4 +62,6 @@ function checkAnswer(userAnswer, answer) {
     } else {
         alert(`Whoops, ${answer} said that line, maybe you need another rewatch of Friends!`)
     }
+
+    console.log("CheckAnswer is running")
 }
