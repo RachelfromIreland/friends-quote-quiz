@@ -121,11 +121,11 @@ function addWrongAnswer() {
  */
 function checkAnswer(userAnswer, answer) {
   if (userAnswer === answer) {
-    alert(`That's right! ${answer} said that line!`);
+    alert(`That's right! That was ${answer}!`);
     addScore();
   } else {
     alert(
-      `Whoops, ${answer} said that line, maybe you need another rewatch of Friends!`
+      `Whoops, ${answer} said that! \nMaybe you need another rewatch of Friends!`
     );
     addWrongAnswer();
   }
