@@ -8,6 +8,8 @@ function showQuiz() {
     displayQuestion();
 }
 
+
+
 /**
  * Data for quiz, three quotes per character
  */
@@ -31,7 +33,8 @@ const quizInfo = [
     quotes: ["You-You-You... You threw my sandwich away...", "Ah. Humor based on my pain.", "I tell you, when I actually die, some people are going to get seriously haunted!"]}
 ];
 
-
+let questionsAsked = 0;
+//let questionCharacter = quizInfo[(Math.floor(Math.random() * quizInfo.length))];
 /**
  * Function to pick a character at random and then one of their quotes at random and display in the random quote div.  
  */
@@ -43,15 +46,21 @@ function displayQuestion() {
 
     quoteDiv.innerHTML = randomQuote;
 
-    let answerButtons = document.getElementsByClassName('answer-button');
-    console.log(answerButtons);
-    for (let answerButton of answerButtons) {
-        answerButton.addEventListener('click', function(){
-        checkAnswer(answerButton.innerText, questionCharacter.friend);
-    });
-    }
+    activeQuestionCharacter = questionCharacter.friend;
 
 };
+
+let activeQuestionCharacter;
+
+let answerButtons = document.getElementsByClassName('answer-button');
+
+for (let answerButton of answerButtons) {
+    answerButton.addEventListener('click', function(){
+        checkAnswer(answerButton.innerText, activeQuestionCharacter);
+    });
+}
+
+console.log(questionsAsked)
 
 /**
  * Increments score by 1 when called
@@ -69,9 +78,8 @@ function addWrongAnswer(){
     document.getElementById("wrong-answers").innerText = ++incorrectScore
 }
 
-
 /** 
- * Checks if the user's answer matches the character from the data array and *increment relevant score total
+ * Checks if the user's answer matches the character from the data array and increment relevant score total
 */
 function checkAnswer(userAnswer, answer) {
     if (userAnswer === answer) {
@@ -82,6 +90,9 @@ function checkAnswer(userAnswer, answer) {
         addWrongAnswer();
     }
 
-    totalQuestions();
+    ++questionsAsked;
+
+    progress();
 }
+
 
