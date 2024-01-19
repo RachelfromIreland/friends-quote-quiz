@@ -11,7 +11,6 @@ function showQuiz() {
 /**
  * Data for quiz, three quotes per character
  */
-
 const quizInfo = [
     {friend: 'Chandler', 
     quotes: ["I'm funny, right? What do you know? You're a door. You only like knock-knock jokes.", "I'm a gym member. I try to go four times a week, but I've missed the last 1200 times.", "I tend to keep talking until somebody stops me."] },
@@ -32,11 +31,10 @@ const quizInfo = [
     quotes: ["You-You-You... You threw my sandwich away...", "Ah. Humor based on my pain.", "I tell you, when I actually die, some people are going to get seriously haunted!"]}
 ];
 
+
 /**
  * Function to pick a character at random and then one of their quotes at random and display in the random quote div.  
  */
-
-//Might need to try another way, trying this first because might need to be able to pull character name to detect right/wrong answer ****DELETE COMMENT WHEN SURE*****
 function displayQuestion() {
     let questionCharacter = quizInfo[(Math.floor(Math.random() * quizInfo.length))];
     let randomQuote = questionCharacter.quotes[(Math.floor(Math.random() * questionCharacter.quotes.length))];
@@ -45,23 +43,45 @@ function displayQuestion() {
 
     quoteDiv.innerHTML = randomQuote;
 
-    //Cut and paste this section inside function, not working outside ****REMOVE COMMENT WHEN DONE****
     let answerButtons = document.getElementsByClassName('answer-button');
     console.log(answerButtons);
     for (let answerButton of answerButtons) {
-        console.log(answerButton)
-    answerButton.addEventListener('click', checkAnswer());
+        answerButton.addEventListener('click', function(){
+        checkAnswer(answerButton.innerText, questionCharacter.friend);
+    });
     }
 
 };
-//answerButton.innerText, questionCharacter.friend
 
+/**
+ * Increments score by 1 when called
+ */
+function addScore(){
+    let score = parseInt(document.getElementById("answers").innerText);
+    document.getElementById("answers").innerText = ++score;
+}
+
+/**
+ * Increments wrong answers by 1 when called
+ */
+function addWrongAnswer(){
+    let incorrectScore = parseInt(document.getElementById("wrong-answers").innerText);
+    document.getElementById("wrong-answers").innerText = ++incorrectScore
+}
+
+
+/** 
+ * Checks if the user's answer matches the character from the data array and *increment relevant score total
+*/
 function checkAnswer(userAnswer, answer) {
     if (userAnswer === answer) {
-        alert(`That's right! ${answer} said that line!`)
+        alert(`That's right! ${answer} said that line!`);
+        addScore();
     } else {
         alert(`Whoops, ${answer} said that line, maybe you need another rewatch of Friends!`)
+        addWrongAnswer();
     }
 
-    console.log("CheckAnswer is running")
+    totalQuestions();
 }
+
