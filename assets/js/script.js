@@ -82,6 +82,7 @@ let questionCounter = 0;
 
 /**
  * Function to pick a character at random and then one of their quotes at random and display in the random quote div.
+ * Also increments questionCounter variable by 1 and defines activeQuestionCharacter for use globally
  */
 function displayQuestion() {
   let questionCharacter = quizInfo[Math.floor(Math.random() * quizInfo.length)];
@@ -101,6 +102,9 @@ function displayQuestion() {
 
 let activeQuestionCharacter;
 
+/**
+ * Code for answer button event listener
+ */
 let answerButtons = document.getElementsByClassName("answer-button");
 
 for (let answerButton of answerButtons) {
@@ -147,7 +151,9 @@ function checkAnswer(userAnswer, answer) {
   progress();
 }
 
-
+/**
+ * Function to keep asking questions until the user gets a score of 10
+ */
 function progress() {
   if (perfectScore < 10) {
     displayQuestion();
@@ -157,7 +163,7 @@ function progress() {
 }
 
 /**
- * Displays end of quiz alert after 6 questions
+ * Displays end of quiz alert after 10 correct answers
  */
 function quizOver() {
   alert(
