@@ -2,97 +2,152 @@
  * Function which hides welcome message and displays the quiz
  */
 function showQuiz() {
-    document.getElementById("welcome").style.display = "none";
-    document.getElementById("quiz").style.display = "block";
+  document.getElementById("welcome").style.display = "none";
+  document.getElementById("quiz").style.display = "block";
 
-    displayQuestion();
+  displayQuestion();
 }
-
-
 
 /**
  * Data for quiz, three quotes per character
  */
 const quizInfo = [
-    {friend: 'Chandler', 
-    quotes: ["I'm funny, right? What do you know? You're a door. You only like knock-knock jokes.", "I'm a gym member. I try to go four times a week, but I've missed the last 1200 times.", "I tend to keep talking until somebody stops me."] },
+  {
+    friend: "Chandler",
+    quotes: [
+      "I'm funny, right? What do you know? You're a door. You only like knock-knock jokes.",
+      "I'm a gym member. I try to go four times a week, but I've missed the last 1200 times.",
+      "I tend to keep talking until somebody stops me.",
+    ],
+  },
 
-    {friend: 'Monica', 
-    quotes: ["And remember, if I'm harsh with you, it's only because you're doing it wrong.", "I've got this uncontrollable need to please people.", "Fine. I'd like to meet this chicken expert. Send the colonel in."] },
+  {
+    friend: "Monica",
+    quotes: [
+      "And remember, if I'm harsh with you, it's only because you're doing it wrong.",
+      "I've got this uncontrollable need to please people.",
+      "Fine. I'd like to meet this chicken expert. Send the colonel in.",
+    ],
+  },
 
-    {friend: 'Joey', 
-    quotes: [" I'm curvy, and I like it", "Sup with the wack playstation, sup", "Look at me! I'm Chandler! could I be wearing any more clothes?"] },
+  {
+    friend: "Joey",
+    quotes: [
+      " I'm curvy, and I like it",
+      "Sup with the wack playstation, sup",
+      "Look at me! I'm Chandler! could I be wearing any more clothes?",
+    ],
+  },
 
-    {friend: 'Rachel', 
-    quotes: ["No uterus, no opinion.", "Oh, I'm sorry. Did my back hurt your knife?", "Oh, that's okay, girls tend to not like me."] },
+  {
+    friend: "Rachel",
+    quotes: [
+      "No uterus, no opinion.",
+      "Oh, I'm sorry. Did my back hurt your knife?",
+      "Oh, that's okay, girls tend to not like me.",
+    ],
+  },
 
-    {friend: 'Phoebe', 
-    quotes: ["Oh, I wish I could, but I don't want to.", "Something is wrong with the left phalange.", "They don't know that we know they know we know."] },
+  {
+    friend: "Phoebe",
+    quotes: [
+      "Oh, I wish I could, but I don't want to.",
+      "Something is wrong with the left phalange.",
+      "They don't know that we know they know we know.",
+    ],
+  },
 
-    {friend: 'Ross', 
-    quotes: ["You-You-You... You threw my sandwich away...", "Ah. Humor based on my pain.", "I tell you, when I actually die, some people are going to get seriously haunted!"]}
+  {
+    friend: "Ross",
+    quotes: [
+      "You-You-You... You threw my sandwich away...",
+      "Ah. Humor based on my pain.",
+      "I tell you, when I actually die, some people are going to get seriously haunted!",
+    ],
+  },
 ];
 
-let questionsAsked = 0;
-//let questionCharacter = quizInfo[(Math.floor(Math.random() * quizInfo.length))];
+let questionCounter = 0;
+
 /**
- * Function to pick a character at random and then one of their quotes at random and display in the random quote div.  
+ * Function to pick a character at random and then one of their quotes at random and display in the random quote div.
  */
 function displayQuestion() {
-    let questionCharacter = quizInfo[(Math.floor(Math.random() * quizInfo.length))];
-    let randomQuote = questionCharacter.quotes[(Math.floor(Math.random() * questionCharacter.quotes.length))];
+  let questionCharacter = quizInfo[Math.floor(Math.random() * quizInfo.length)];
+  let randomQuote =
+    questionCharacter.quotes[
+      Math.floor(Math.random() * questionCharacter.quotes.length)
+    ];
 
-    let quoteDiv = document.getElementById("random-quote");
+  let quoteDiv = document.getElementById("random-quote");
 
-    quoteDiv.innerHTML = randomQuote;
+  quoteDiv.innerHTML = randomQuote;
 
-    activeQuestionCharacter = questionCharacter.friend;
+  activeQuestionCharacter = questionCharacter.friend;
 
-};
+  questionCounter++;
+}
 
 let activeQuestionCharacter;
 
-let answerButtons = document.getElementsByClassName('answer-button');
+let answerButtons = document.getElementsByClassName("answer-button");
 
 for (let answerButton of answerButtons) {
-    answerButton.addEventListener('click', function(){
-        checkAnswer(answerButton.innerText, activeQuestionCharacter);
-    });
+  answerButton.addEventListener("click", function () {
+    checkAnswer(answerButton.innerText, activeQuestionCharacter);
+  });
 }
-
-console.log(questionsAsked)
 
 /**
  * Increments score by 1 when called
  */
-function addScore(){
-    let score = parseInt(document.getElementById("answers").innerText);
-    document.getElementById("answers").innerText = ++score;
+function addScore() {
+  let score = parseInt(document.getElementById("answers").innerText);
+  document.getElementById("answers").innerText = ++score;
 }
 
 /**
  * Increments wrong answers by 1 when called
  */
-function addWrongAnswer(){
-    let incorrectScore = parseInt(document.getElementById("wrong-answers").innerText);
-    document.getElementById("wrong-answers").innerText = ++incorrectScore
+function addWrongAnswer() {
+  let incorrectScore = parseInt(
+    document.getElementById("wrong-answers").innerText
+  );
+  document.getElementById("wrong-answers").innerText = ++incorrectScore;
 }
 
-/** 
+/**
  * Checks if the user's answer matches the character from the data array and increment relevant score total
-*/
+ */
 function checkAnswer(userAnswer, answer) {
-    if (userAnswer === answer) {
-        alert(`That's right! ${answer} said that line!`);
-        addScore();
-    } else {
-        alert(`Whoops, ${answer} said that line, maybe you need another rewatch of Friends!`)
-        addWrongAnswer();
-    }
+  if (userAnswer === answer) {
+    alert(`That's right! ${answer} said that line!`);
+    addScore();
+  } else {
+    alert(
+      `Whoops, ${answer} said that line, maybe you need another rewatch of Friends!`
+    );
+    addWrongAnswer();
+  }
 
-    ++questionsAsked;
-
-    progress();
+  progress();
 }
 
+let perfectScore = parseInt(document.getElementById("answers").innerText);
 
+function progress() {
+  if (questionCounter < 6) {
+    displayQuestion();
+  } else {
+    quizOver();
+  }
+}
+
+/**
+ * Displays end of quiz alert after 6 questions
+ */
+function quizOver() {
+  alert(
+    `Well done! You've reached the end of the quiz!  You got ${perfectScore} right out of 6!`
+  );
+}
