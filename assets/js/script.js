@@ -1,4 +1,10 @@
 /**
+ * Event listener to trigger showQuiz when start button is clicked
+ */
+let startButton = document.getElementById("start-button");
+startButton.addEventListener('click', showQuiz)
+
+/**
  * Function which hides welcome message and displays the quiz
  */
 function showQuiz() {
