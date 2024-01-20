@@ -8,18 +8,24 @@
 </head>
 
 <body>
+    <!--  Header with quiz name  -->
+    <header>
+        <h1>F.R.I.E.N.D.S Quote Quiz</h1>
+    </header>
+
     <!--  Space for code for Welcome Message  -->
     <div id="welcome">
-        <h1>Test your knowledge of <em>Friends</em> quotes!</h1>
+        <h2>Test your knowledge of <span class="show-name">F.R.I.E.N.D.S</span> quotes!</h2>
         <p>Select which charater you think said these randomly generated quotes.  We'll tally up your score as you go, there are six questions, see if you can get a perfect score!  
-        <br>    
+        <br>     
+        <br>
         Click the <strong>Start Quiz</strong> button below to begin.</p>
-        <button id="start-button" class="start-button" onclick="showQuiz()">Start Quiz</button>
+        <button id="start-button" class="start-button">Start Quiz</button>
     </div>
 
     <!--  Code for quiz to be displayed after start button is clicked -->
     <div id="quiz">
-        <h1>Who said this?</h1>
+        <h2>Who said this?</h2>
         <div id="random-quote"></div>
         <div id="character-buttons">
             <button type="button" id="chandler" class="answer-button">Chandler</button>
