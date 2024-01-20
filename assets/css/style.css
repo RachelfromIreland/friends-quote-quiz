@@ -195,5 +195,7 @@ p {
     .answer-button {
         width: 200px;
         height: 250px;
+        padding-top: 180px;
+        font-size: 180%;
     }
 }
