@@ -169,8 +169,16 @@ h2 {
 }
 }
 
+p {
+    font-size: 180%;
+}
+
 /*  Laptops and up - 992px plus  */
 @media screen and (min-width: 992px) {
+    header{
+        font-size: 300%;
+    }
+
     h2 {
         font-size: 280%;
     }
@@ -178,4 +186,14 @@ h2 {
     #random-quote {
         font-size: 210%;
     }
+
+    p {
+        font-size: 210%;
     }
+    
+
+    .answer-button {
+        width: 200px;
+        height: 250px;
+    }
+}
