@@ -95,7 +95,7 @@ button:hover {
 .answer-button {
     width: 100px;
     height: 150px;
-    padding-top: 115px;
+    padding-top: 170px;
     margin: 15px;
     text-shadow: 1px 1px #d2c385;
     -webkit-text-stroke: 0.5px #d2c385;
@@ -167,10 +167,17 @@ h2 {
 #random-quote {
     font-size: 180%;
 }
-}
 
 p {
     font-size: 180%;
+}
+
+.answer-button {
+    width: 150px;
+    height: 200px;
+    padding-top: 180px;
+    font-size: 180%;
+}
 }
 
 /*  Laptops and up - 992px plus  */
@@ -195,7 +202,7 @@ p {
     .answer-button {
         width: 200px;
         height: 250px;
-        padding-top: 180px;
-        font-size: 180%;
+        padding-top: 220px;
+        font-size: 200%;
     }
 }
