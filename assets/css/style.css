@@ -33,15 +33,6 @@ header {
     margin-bottom: 30px;
 }
 
-/*  Welcome message styles  */
-/*#welcome {
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
-    text-align: center;
-    width: 80%;
-}*/
-
 #welcome h2 {
     text-align: center;
     margin-bottom: 20px;
@@ -63,7 +54,7 @@ button {
     color: #d2c385;
     border-radius: 2px;
     font-size: 100%;
-    padding: 15px 30px;
+    padding: 15px 20px;
     font-family: 'Gloria Hallelujah', sans-serif;
     border: 2px solid #d2c385;
     margin-top: 20px;
@@ -93,3 +84,89 @@ button:hover {
     padding: 20px;
     margin-top: 20px;
 }
+
+#character-buttons {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    align-content: space-evenly;
+}
+
+.answer-button {
+    width: 100px;
+    height: 150px;
+    padding-top: 115px;
+    margin: 15px;
+}
+
+/*  Background images for character buttons  */
+#chandler {
+    background: url("../images/chandler-button-image.png") no-repeat center center/cover;
+    
+}
+
+#monica {
+    background: url("../images/monica-button-image.png") no-repeat center center/cover;
+    
+}
+
+#joey {
+    background: url("../images/joey-button-image.png") no-repeat center center/cover;
+    
+}
+
+#rachel {
+    background: url("../images/rachel-button-image.png") no-repeat center center/cover;
+    
+}
+
+#phoebe {
+    background: url("../images/phoebe-button-image.png") no-repeat center center/cover;
+    
+}
+
+#ross {
+    background: url("../images/ross-button-image.png") no-repeat center center/cover;
+    
+}
+
+/*  Scores section  */
+
+.scores {
+    margin: 20px;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    align-content: space-evenly;
+}
+
+#correct {
+    padding: 15px;
+}
+
+#incorrect {
+    padding: 15px;
+}
+
+/*  Media Query to increase question text on a larger screen  */
+/*  Tablets and up - 768px plus  */
+@media screen and (min-width: 768px) {
+h2 {
+    font-size: 250%;
+}
+
+#random-quote {
+    font-size: 180%;
+}
+}
+
+/*  Laptops and up - 992px plus  */
+@media screen and (min-width: 992px) {
+    h2 {
+        font-size: 280%;
+    }
+    
+    #random-quote {
+        font-size: 210%;
+    }
+    }
