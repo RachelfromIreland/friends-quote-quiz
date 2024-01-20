@@ -1,208 +1,214 @@
 /*  Google Fonts Import   */
-@import url('https://fonts.googleapis.com/css2?family=Gloria+Hallelujah&family=Rubik:wght@300&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Gloria+Hallelujah&family=Rubik:wght@300&display=swap");
 
 /*Asterisk wildcard selector to override default styles added by the browser*/
 * {
-    padding: 0;
-    margin: 0;
-    box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
 }
 
 /*  Sets quiz to invisible until startQuiz function is called*/
 #quiz {
-    display: none;
+  display: none;
 }
 
 /*  General styles  */
 body {
-    min-height: 100vh;
-    font-family: 'Rubik', sans-serif;
-    background-color: #9c8cd4;
-    color: #1d1238;
+  min-height: 100vh;
+  font-family: "Rubik", sans-serif;
+  background-color: #9c8cd4;
+  color: #1d1238;
 }
-
 
 /*  Header styles - Header will stay in place for duration of quiz*/
 header {
-    background-color: #d2c385;
-    color: #1d1238;
-    width: 100%;
-    box-shadow: 0 2px 2px #c9a92c;
-    text-align: center;
-    font-family: 'Gloria Hallelujah', sans-serif;
-    margin-bottom: 30px;
+  background-color: #d2c385;
+  color: #1d1238;
+  width: 100%;
+  box-shadow: 0 2px 2px #c9a92c;
+  text-align: center;
+  font-family: "Gloria Hallelujah", sans-serif;
+  margin-bottom: 30px;
 }
 
 #welcome h2 {
-    text-align: center;
-    margin-bottom: 20px;
+  text-align: center;
+  margin-bottom: 20px;
 }
 
 #welcome p {
-    text-align: center;
-    margin-bottom: 20px;
+  text-align: center;
+  margin-bottom: 20px;
 }
 
 /*  Styles to keep show name consistent*/
 .show-name {
-    font-family: 'Gloria Hallelujah', sans-serif;
+  font-family: "Gloria Hallelujah", sans-serif;
 }
 
 /*  Button styles - Start and Character Buttons  */
 button {
-    background-color: #8372aa;
-    color: #d2c385;
-    border-radius: 2px;
-    font-size: 100%;
-    padding: 15px 20px;
-    font-family: 'Gloria Hallelujah', sans-serif;
-    border: 2px solid #d2c385;
-    margin-top: 20px;
+  background-color: #8372aa;
+  color: #d2c385;
+  border-radius: 2px;
+  font-size: 100%;
+  padding: 15px 20px;
+  font-family: "Gloria Hallelujah", sans-serif;
+  border: 2px solid #d2c385;
+  margin-top: 20px;
 }
 
 button:hover {
-    background-color: #d2c385;
-    color: #1d1238;
-    border-color: #1d1238;
+  background-color: #d2c385;
+  color: #1d1238;
+  border-color: #1d1238;
 }
 
 #start-button {
-    width: fit-content;
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
+  width: fit-content;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 /*  Quiz Section styles  */
 #quiz h2 {
-    text-align: center;
-    margin-bottom: 20px;
+  text-align: center;
+  margin-bottom: 20px;
 }
 
 #random-quote {
-    text-align: center;
-    padding: 20px;
-    margin-top: 20px;
+  text-align: center;
+  padding: 20px;
+  margin-top: 20px;
 }
 
 #character-buttons {
-    display: flex;
-    flex-flow: row wrap;
-    justify-content: center;
-    align-content: space-evenly;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  align-content: space-evenly;
 }
 
 .answer-button {
-    width: 100px;
-    height: 150px;
-    padding-top: 170px;
-    margin: 15px;
-    text-shadow: 1px 1px #d2c385;
-    -webkit-text-stroke: 0.5px #d2c385;
-    color: #1d1238;
+  width: 100px;
+  height: 150px;
+  padding-top: 170px;
+  margin: 15px;
+  text-shadow: 1px 1px #d2c385;
+  -webkit-text-stroke: 0.5px #d2c385;
+  color: #1d1238;
 }
 
 .answer-button:hover {
-    text-shadow: 1px 1px #1d1238;
-    -webkit-text-stroke: 0.5px #1d1238;
-    color: #d2c385;
+  text-shadow: 1px 1px #1d1238;
+  -webkit-text-stroke: 0.5px #1d1238;
+  color: #d2c385;
 }
 
 /*  Background images for character buttons  */
 #chandler {
-    background: url("../images/chandler-button-image.png") no-repeat center center/cover;
-    
+  background: url("../images/chandler-button-image.png") no-repeat center
+    center/cover;
 }
 
 #monica {
-    background: url("../images/monica-button-image.png") no-repeat center center/cover;
-    
+  background: url("../images/monica-button-image.png") no-repeat center
+    center/cover;
 }
 
 #joey {
-    background: url("../images/joey-button-image.png") no-repeat center center/cover;
-    
+  background: url("../images/joey-button-image.png") no-repeat center
+    center/cover;
 }
 
 #rachel {
-    background: url("../images/rachel-button-image.png") no-repeat center center/cover;
-    
+  background: url("../images/rachel-button-image.png") no-repeat center
+    center/cover;
 }
 
 #phoebe {
-    background: url("../images/phoebe-button-image.png") no-repeat center center/cover;
-    
+  background: url("../images/phoebe-button-image.png") no-repeat center
+    center/cover;
 }
 
 #ross {
-    background: url("../images/ross-button-image.png") no-repeat center center/cover;
-    
+  background: url("../images/ross-button-image.png") no-repeat center
+    center/cover;
 }
 
 /*  Scores section  */
 
 .scores {
-    margin: 20px;
-    display: flex;
-    flex-flow: row wrap;
-    justify-content: center;
-    align-content: space-evenly;
+  margin: 20px;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  align-content: space-evenly;
 }
 
 #correct {
-    padding: 15px;
+  padding: 15px;
 }
 
 #incorrect {
-    padding: 15px;
+  padding: 15px;
 }
 
 /*  Media Query to increase question text on a larger screen  */
 /*  Tablets and up - 768px plus  */
 @media screen and (min-width: 768px) {
-h2 {
+  header {
+    font-size: 150%;
+  }
+
+  h2 {
     font-size: 250%;
-}
+  }
 
-#random-quote {
+  #random-quote {
     font-size: 180%;
-}
+  }
 
-p {
+  p {
     font-size: 180%;
-}
+  }
 
-.answer-button {
+  .answer-button {
     width: 150px;
     height: 200px;
     padding-top: 180px;
     font-size: 180%;
-}
+  }
 }
 
 /*  Laptops and up - 992px plus  */
 @media screen and (min-width: 992px) {
-    header{
-        font-size: 300%;
-    }
+  header {
+    font-size: 250%;
+  }
 
-    h2 {
-        font-size: 280%;
-    }
-    
-    #random-quote {
-        font-size: 210%;
-    }
+  h2 {
+    font-size: 280%;
+  }
 
-    p {
-        font-size: 210%;
-    }
-    
+  #start-button {
+    font-size: 150%;
+  }
 
-    .answer-button {
-        width: 200px;
-        height: 250px;
-        padding-top: 220px;
-        font-size: 200%;
-    }
+  #random-quote {
+    font-size: 210%;
+  }
+
+  p {
+    font-size: 210%;
+  }
+
+  .answer-button {
+    width: 200px;
+    height: 250px;
+    padding-top: 220px;
+    font-size: 200%;
+  }
 }
