@@ -97,6 +97,15 @@ button:hover {
     height: 150px;
     padding-top: 115px;
     margin: 15px;
+    text-shadow: 1px 1px #d2c385;
+    -webkit-text-stroke: 0.5px #d2c385;
+    color: #1d1238;
+}
+
+.answer-button:hover {
+    text-shadow: 1px 1px #1d1238;
+    -webkit-text-stroke: 0.5px #1d1238;
+    color: #d2c385;
 }
 
 /*  Background images for character buttons  */
