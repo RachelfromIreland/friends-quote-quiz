@@ -135,7 +135,7 @@ All images for the character buttons were taken from the Television and Film Cha
 
 [Chandler Bing Image](https://www.tafce.com/index.php?title=Chandler_Bing) 
 
-The favicon image was a free download from a clip art site.
+The logo and favicon image was a free download from a clip art site.
 
 [Favicon](https://www.hiclipart.com/free-transparent-background-png-clipart-jzfzc/download)
 
