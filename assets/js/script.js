@@ -8,6 +8,8 @@ startButton.addEventListener("click", showQuiz);
  * Function which hides welcome message and displays the quiz
  */
 function showQuiz() {
+  resetScores();
+
   document.getElementById("welcome").style.display = "none";
   document.getElementById("quiz").style.display = "block";
 
@@ -177,8 +179,9 @@ function progress() {
  */
 function quizOver() {
   alert(
-    `Well done! You've reached the end of the quiz!  You got ${perfectScore} right out of ${questionCounter}! \nThat's one question for every season of Friends!`
+    `Well done! You've reached the end of the quiz! \n \n You got ${perfectScore} right out of ${questionCounter}! \nThat's one question for every season of Friends!  \n \n Want to try again? Hit okay to play another round!`
   );
+  beginAgain();
 }
 
 /**
@@ -186,6 +189,24 @@ function quizOver() {
  */
 function tenForTen() {
   alert(
-    `WOW! You got ${perfectScore} out of ${questionCounter}! \nThat's a perfect score! \nMonica would be so proud!`
+    `WOW! You got ${perfectScore} out of ${questionCounter}! That's a perfect score!\n  \nMonica would be so proud! \n \n Want to try again? Hit okay to play another round!`
   );
+  beginAgain();
+}
+
+function resetScores() {
+  console.log(questionCounter, perfectScore);
+  questionCounter = 0;
+  perfectScore = 0;
+
+  document.getElementById("answers").innerText = "0";
+  document.getElementById("wrong-answers").innerText = "0";
+  console.log(questionCounter, perfectScore);
+}
+
+function beginAgain() {
+  resetScores();
+
+  document.getElementById("welcome").style.display = "block";
+  document.getElementById("quiz").style.display = "none";
 }
