@@ -99,6 +99,7 @@ button:hover {
   text-shadow: 1px 1px #d2c385;
   -webkit-text-stroke: 0.5px #d2c385;
   color: #1d1238;
+  border-radius: 5px;
 }
 
 .answer-button:hover {
@@ -156,6 +157,22 @@ button:hover {
   padding: 15px;
 }
 
+/*  Footer  */
+footer {
+    background-color: #d2c385;
+    width: 100%;
+    z-index: 99;
+    position: fixed;
+    left: 0;
+    bottom: 0;
+}
+
+footer img {
+    width: 150px;
+    display: block;
+    margin: auto;
+}
+
 /*  Media Query to increase question text on a larger screen  */
 /*  Tablets and up - 768px plus  */
 @media screen and (min-width: 768px) {
@@ -186,7 +203,7 @@ button:hover {
 /*  Laptops and up - 992px plus  */
 @media screen and (min-width: 992px) {
   header {
-    font-size: 250%;
+    font-size: 200%;
   }
 
   h2 {
