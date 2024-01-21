@@ -169,11 +169,11 @@ button:hover {
 /*  Tablets and up - 768px plus  */
 @media screen and (min-width: 768px) {
   header {
-    font-size: 150%;
+    font-size: 140%;
   }
 
   header img {
-    height: 60px;
+    height: 75px;
   }  
 
   h2 {
@@ -203,7 +203,7 @@ button:hover {
   }
 
   header img {
-    height: 75px;
+    height: 100px;
   }
 
   h2 {
