@@ -161,9 +161,12 @@ function checkAnswer(userAnswer, answer) {
  * Function to keep asking questions until the user gets a score of 10
  */
 function progress() {
-  if (perfectScore < 10) {
+  if (questionCounter < 10) {
     displayQuestion();
-  } else {
+  } else if (perfectScore === 10 && questionCounter === 10) {
+    tenForTen();
+  } 
+  else {
     quizOver();
   }
 }
@@ -173,6 +176,15 @@ function progress() {
  */
 function quizOver() {
   alert(
-    `Well done! You've reached the end of the quiz!  You got ${perfectScore} right out of ${questionCounter}! \nThat's one right for every season of Friends!`
+    `Well done! You've reached the end of the quiz!  You got ${perfectScore} right out of ${questionCounter}! \nThat's one question for every season of Friends!`
   );
+}
+
+/**
+ * User gets this alert if they get ten out of ten
+ */
+function tenForTen(){
+  alert(
+    `WOW! You got ${perfectScore} out of ${questionCounter}! \nThat's a perfect score! \nMonica would be so proud!`
+  )
 }
