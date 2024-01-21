@@ -170,26 +170,33 @@ button:hover {
   display: none;
   position: fixed;
   z-index: 99;
-  left: 0;
-  top: 0;
+  left: 0%;
+  top: 0%;
   width: 100%;
   height: 100%;
-  background-color: rgba(29, 18, 56, 0.5);
+  background-color: rgba(29, 18, 56, 0.7);
 }
 
 #modal-message {
   background-color: #d2c385;
-  margin: 15% auto;
   padding: 20px;
-  border: 1px solid #9c8cd4;
+  border: 4px solid #9c8cd4;
+  border-radius: 5px;
   width: 80%;
+  margin: auto;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  box-sizing: content-box;
 }
 
 .close-modal {
-  color: #1d1238;
+  color: #d2c385;
   float: right;
-  font-size: 28px;
+  font-size: 50px;
   font-weight: bold;
+  display: none;
 }
 
 .close-modal:hover {

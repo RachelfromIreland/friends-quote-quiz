@@ -228,21 +228,28 @@ function beginAgain() {
 }
 
 /**
- * Functions for modal, delete if not working and go back to alerts
+ * Functions for modal, learned from a W3Schools article - Link in README
  */
+
+//Declaring modal variables
 let modalMessage = document.getElementById("modal-message");
 let modal = document.getElementById("modal");
 let modalCloseButton = document.getElementById("close-modal");
 
+/**
+ * Function to display different messages to the user, functions like an alert when called
+ */
 function userMessage(message) {
   modalMessage.textContent = message;
   modal.style.display = "block";
 }
 
+//Click event for the close button to hide the modal when clicked
 modalCloseButton.onclick = function () {
   modal.style.display = "none";
 };
 
+//Click event so the user can just click the window to close the modal
 window.onclick = function (event) {
   if (event.target == modal) {
     modal.style.display = "none";
