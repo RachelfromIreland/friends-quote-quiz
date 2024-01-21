@@ -1,51 +1,74 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Friends Quotes Quiz</title>
-    <link rel="stylesheet" href="assets/css/style.css">
-</head>
+    <link rel="stylesheet" href="assets/css/style.css" />
+  </head>
 
-<body>
+  <body>
     <!--  Header with quiz name  -->
     <header>
-        <h1>F.R.I.E.N.D.S Quote Quiz</h1>
+      <h1>F.R.I.E.N.D.S Quote Quiz</h1>
     </header>
 
-    <!--  Space for code for Welcome Message  -->
-    <div id="welcome">
-        <h2>Test your knowledge of <span class="show-name">F.R.I.E.N.D.S</span> quotes!</h2>
-        <p>Select which charater you think said these randomly generated quotes.  We'll tally up your score as you go, there are six questions, see if you can get a perfect score!  
-        <br>     
-        <br>
-        Click the <strong>Start Quiz</strong> button below to begin.</p>
+    <main>
+      <!--  Space for code for Welcome Message  -->
+      <div id="welcome">
+        <h2>
+          Test your knowledge of
+          <span class="show-name">F.R.I.E.N.D.S</span> quotes!
+        </h2>
+        <p>
+          Select which charater you think said these randomly generated quotes.
+          We'll tally up your score as you go, there are six questions, see if
+          you can get a perfect score!
+          <br />
+          <br />
+          Click the <strong>Start Quiz</strong> button below to begin.
+        </p>
         <button id="start-button" class="start-button">Start Quiz</button>
-    </div>
+      </div>
 
-    <!--  Code for quiz to be displayed after start button is clicked -->
-    <div id="quiz">
+      <!--  Code for quiz to be displayed after start button is clicked -->
+      <div id="quiz">
         <h2>Who said this?</h2>
         <div id="random-quote"></div>
         <div id="character-buttons">
-            <button type="button" id="chandler" class="answer-button">Chandler</button>
-            <button type="button" id="monica" class="answer-button">Monica</button>
-            <button type="button" id="joey" class="answer-button">Joey</button>
-            <button type="button" id="rachel" class="answer-button">Rachel</button>
-            <button type="button" id="phoebe" class="answer-button">Phoebe</button>
-            <button type="button" id="ross" class="answer-button">Ross</button>
+          <button type="button" id="chandler" class="answer-button">
+            Chandler
+          </button>
+          <button type="button" id="monica" class="answer-button">
+            Monica
+          </button>
+          <button type="button" id="joey" class="answer-button">Joey</button>
+          <button type="button" id="rachel" class="answer-button">
+            Rachel
+          </button>
+          <button type="button" id="phoebe" class="answer-button">
+            Phoebe
+          </button>
+          <button type="button" id="ross" class="answer-button">Ross</button>
         </div>
         <div class="scores">
-            <div id="correct">
-                <p>Correct Answers: <span id="answers">0</span></p>
-            </div>
-            <div id="incorrect">
-                <p>Incorrect Answers: <span id="wrong-answers">0</span></p>
-            </div>
+          <div id="correct">
+            <p>Correct Answers: <span id="answers">0</span></p>
+          </div>
+          <div id="incorrect">
+            <p>Incorrect Answers: <span id="wrong-answers">0</span></p>
+          </div>
         </div>
-    </div>
+      </div>
+    </main>
+
+    <footer>
+      <img
+        src="assets/images/Central-Perk-Logo.png"
+        alt="Central Perk Coffeehouse Logo"
+      />
+    </footer>
 
     <script src="assets/js/script.js"></script>
-</body>
-
+  </body>
 </html>
