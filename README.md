@@ -31,7 +31,7 @@ The site can be accessed by this [link](https://rachelfromireland.github.io/frie
 - Contains instructions for the quiz followed by a Start Quiz button which begins the quiz.
 - The Welcome Message is hidden after clicking the Start button.
 
->Welcome Message Screenshot
+![Welcome Message Screenshot](/documents/welcome-message-screenshot.png)
 
 ### The Quiz Page
 - Displays after the user clicks the start button.  
@@ -135,9 +135,9 @@ All images for the character buttons were taken from the Television and Film Cha
 
 [Chandler Bing Image](https://www.tafce.com/index.php?title=Chandler_Bing) 
 
-The logo and favicon image was a free download from a clip art site.
+The logo and favicon image were a free download from HiClipArt.
 
-[Favicon](https://www.hiclipart.com/free-transparent-background-png-clipart-jzfzc/download)
+[Favicon and Logo](https://www.hiclipart.com/free-transparent-background-png-clipart-jzfzc/download)
 
 ## Tools
 - Paint 3D was used to make all character images the same size.
