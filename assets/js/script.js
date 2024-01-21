@@ -89,6 +89,7 @@ let questionCounter = 0;
 /**
  * Function to pick a character at random and then one of their quotes at random and display in the random quote div.
  * Also increments questionCounter variable by 1 and defines activeQuestionCharacter for use globally
+ * Learned how to select a random element from the array from a post on geeksforgeeks - linked in README
  */
 function displayQuestion() {
   let questionCharacter = quizInfo[Math.floor(Math.random() * quizInfo.length)];
@@ -110,6 +111,7 @@ let activeQuestionCharacter;
 
 /**
  * Code for answer button event listener
+ * Adding event listeners to class learned from a blog post from Borislav Hadzhiev - linked in README
  */
 let answerButtons = document.getElementsByClassName("answer-button");
 
