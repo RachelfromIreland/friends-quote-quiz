@@ -143,4 +143,5 @@ The favicon image was a free download from a clip art site.
 - Paint 3D was used to make all character images the same size.
 - [W3Schools](https://www.w3schools.com) was an invaluable resource for problem-solving.
 - [CSS Tricks](https://css-tricks.com/snippets/css/a-guide-to-flexbox/) was a good resource to ensure I was using Flexbox correctly.
+- The responsive mockup image was generated using [TechSini](https://techsini.com/multi-mockup/index.php).
 
