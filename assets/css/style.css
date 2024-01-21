@@ -158,19 +158,6 @@ button:hover {
   padding: 15px;
 }
 
-/*  Footer  */
-footer {
-    margin-top: 50px;
-    width: 100%;
-    z-index: 99;
-}
-
-footer img {
-    width: 100px;
-    display: block;
-    margin: auto;
-}
-
 /*  Media Query to increase question text on a larger screen  */
 /*  Tablets and up - 768px plus  */
 @media screen and (min-width: 768px) {

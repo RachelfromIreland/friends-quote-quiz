@@ -2,7 +2,7 @@
  * Event listener to trigger showQuiz when start button is clicked
  */
 let startButton = document.getElementById("start-button");
-startButton.addEventListener('click', showQuiz)
+startButton.addEventListener("click", showQuiz);
 
 /**
  * Function which hides welcome message and displays the quiz
@@ -25,7 +25,7 @@ const quizInfo = [
       "I'm a gym member. I try to go four times a week, but I've missed the last... twelve-hundred times.",
       "I tend to keep talking until somebody stops me.",
       "You know, on second thought, gum would be perfection.",
-      "I can handle this. Handle's my middle name. Actually, it's the middle part of my first name."
+      "I can handle this. Handle's my middle name. Actually, it's the middle part of my first name.",
     ],
   },
 
@@ -36,7 +36,7 @@ const quizInfo = [
       "I've got this uncontrollable need to please people.",
       "Fine. I'd like to meet this chicken expert. Send the colonel in.",
       "Welcome to the real world. It sucks. You're gonna love it.",
-      "Lips moving, still talking!"
+      "Lips moving, still talking!",
     ],
   },
 
@@ -47,7 +47,7 @@ const quizInfo = [
       "Sup with the wack playstation, sup",
       "Look at me! I'm Chandler! could I be wearing any more clothes?",
       "(This friend) doesn't share food!",
-      "Well, the fridge broke. So I had to eat everything."
+      "Well, the fridge broke. So I had to eat everything.",
     ],
   },
 
@@ -58,7 +58,7 @@ const quizInfo = [
       "Oh, I'm sorry. Did my back hurt your knife?",
       "Oh, that's okay, girls tend to not like me.",
       "Everyone is getting married or pregnant or promoted and I'm getting coffee! \nAnd it's not even for me!",
-      "Isn't that just kick-you-in-the-crotch, spit-on-your-neck fantastic?"
+      "Isn't that just kick-you-in-the-crotch, spit-on-your-neck fantastic?",
     ],
   },
 
@@ -69,7 +69,7 @@ const quizInfo = [
       "Something is wrong with the left phalange.",
       "They don't know that we know they know we know.",
       "See? He's her lobster!",
-      "Meet Princess Consuela Banana Hammock"
+      "Meet Princess Consuela Banana Hammock",
     ],
   },
 
@@ -165,8 +165,7 @@ function progress() {
     displayQuestion();
   } else if (perfectScore === 10 && questionCounter === 10) {
     tenForTen();
-  } 
-  else {
+  } else {
     quizOver();
   }
 }
@@ -183,8 +182,8 @@ function quizOver() {
 /**
  * User gets this alert if they get ten out of ten
  */
-function tenForTen(){
+function tenForTen() {
   alert(
     `WOW! You got ${perfectScore} out of ${questionCounter}! \nThat's a perfect score! \nMonica would be so proud!`
-  )
+  );
 }
