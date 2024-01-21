@@ -6,7 +6,7 @@ The quiz ends after the user answers 10 questions – one for every season of Fr
 
 The site can be accessed by this [link](https://rachelfromireland.github.io/friends-quote-quiz/).
 
->RESPONSIVE MOCKUP IMAGE HERE
+![Responsive Mockup Image](/documents/mockup-image.png)
 
 ## User Stories
 
