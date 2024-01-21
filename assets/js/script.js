@@ -230,17 +230,17 @@ function beginAgain() {
 /**
  * Functions for modal, delete if not working and go back to alerts
  */
-function userMessage(message) {
-  let modalMessage = document.getElementById("modal-message");
-  let modal = document.getElementById("modal");
+let modalMessage = document.getElementById("modal-message");
+let modal = document.getElementById("modal");
+let modalCloseButton = document.getElementById("close-modal");
 
+function userMessage(message) {
   modalMessage.textContent = message;
   modal.style.display = "block";
 }
 
-const modalCloseButton = document.getElementById("close-modal");
 modalCloseButton.onclick = function () {
-  modal.style.display = "block";
+  modal.style.display = "none";
 };
 
 window.onclick = function (event) {
