@@ -172,6 +172,10 @@ button:hover {
     font-size: 150%;
   }
 
+  header img {
+    height: 60px;
+  }  
+
   h2 {
     font-size: 250%;
   }
@@ -199,7 +203,7 @@ button:hover {
   }
 
   header img {
-    height: 60px;
+    height: 75px;
   }
 
   h2 {
