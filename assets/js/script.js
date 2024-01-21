@@ -162,7 +162,7 @@ function checkAnswer(userAnswer, answer) {
 }
 
 /**
- * Function to keep asking questions until the user gets a score of 10
+ * Function to keep asking questions until the user answers 10 questions
  */
 function progress() {
   if (questionCounter < 10) {
@@ -194,16 +194,20 @@ function tenForTen() {
   beginAgain();
 }
 
+/**
+ * Reset questionCounter and perfectScore variables to 0 and text inside scores Div to 0 for each
+ */
 function resetScores() {
-  console.log(questionCounter, perfectScore);
   questionCounter = 0;
   perfectScore = 0;
 
   document.getElementById("answers").innerText = "0";
   document.getElementById("wrong-answers").innerText = "0";
-  console.log(questionCounter, perfectScore);
 }
 
+/**
+ * Call reset scores function and display welcome message to begin quiz again
+ */
 function beginAgain() {
   resetScores();
 
