@@ -143,6 +143,7 @@ button:hover {
 
 .scores {
   margin: 20px;
+  margin-bottom: 75px;
   display: flex;
   flex-flow: row wrap;
   justify-content: center;
@@ -159,16 +160,13 @@ button:hover {
 
 /*  Footer  */
 footer {
-    background-color: #d2c385;
+    margin-top: 50px;
     width: 100%;
     z-index: 99;
-    position: fixed;
-    left: 0;
-    bottom: 0;
 }
 
 footer img {
-    width: 150px;
+    width: 100px;
     display: block;
     margin: auto;
 }
