@@ -149,13 +149,9 @@ function addWrongAnswer() {
  */
 function checkAnswer(userAnswer, answer) {
   if (userAnswer === answer) {
-    // alert(`That's right! That was ${answer}!`);
     userMessage(`That's right! That was ${answer}!`);
     addScore();
   } else {
-    //  alert(
-    //   `Whoops, ${answer} said that! \nMaybe you need another rewatch of Friends!`
-    // );
     userMessage(
       `Whoops, ${answer} said that! \nMaybe you need another rewatch of Friends!`
     );
@@ -182,9 +178,6 @@ function progress() {
  * Displays end of quiz alert after 10 correct answers
  */
 function quizOver() {
-  //alert(
-  //    `Well done! You've reached the end of the quiz! \n \n You got ${perfectScore} right out of ${questionCounter}! \nThat's one question for every season of Friends!  \n \n Want to try again? Hit okay to play another round!`
-  // );
   userMessage(
     `Well done! You've reached the end of the quiz! \n \n You got ${perfectScore} right out of ${questionCounter}! \nThat's one question for every season of Friends!  \n \n Want to try again? Hit okay to play another round!`
   );
@@ -195,10 +188,6 @@ function quizOver() {
  * User gets this alert if they get ten out of ten
  */
 function tenForTen() {
-  //  alert(
-  //   `WOW! You got ${perfectScore} out of ${questionCounter}! That's a perfect score!\n  \nMonica would be so proud! \n \n Want to try again? Hit okay to play another round!`
-  //);
-
   userMessage(
     `WOW! You got ${perfectScore} out of ${questionCounter}! That's a perfect score!\n  \nMonica would be so proud! \n \n Want to try again? Hit okay to play another round!`
   );
