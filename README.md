@@ -1,4 +1,4 @@
->HEADER SCREENSHOT HERE
+![Header and Logo Screenshot](/documents/header-screenshot.png)
 
 The **Friends Quote Quiz** is a short quiz in which the user guesses which of the six main characters of Friends said a randomly generated quote.  
 
@@ -21,8 +21,9 @@ The site can be accessed by this [link](https://rachelfromireland.github.io/frie
 ## Features
 
 ### The Quiz Heading
--The heading is featured at the top of the page.  As soon as the site loads the user can see the name of the game.  This remains in place for the duration of the quiz.
->Heading screenshot
+-The heading is featured at the top of the page.  As soon as the site loads the user can see the name of the game.  This remains in place for the duration of the quiz.  It, as well as the rest of the quiz, has a responsive design.  Here it is for mobile:
+
+![Mobile Header Screenshot](/documents/mobile-header-screenshot.png)
 
 ### The Welcome Message
 
@@ -33,24 +34,28 @@ The site can be accessed by this [link](https://rachelfromireland.github.io/frie
 >Welcome Message Screenshot
 
 ### The Quiz Page
-- Displays after the user clicks the start button.
->Quiz Screenshot
+- Displays after the user clicks the start button.  
+
+![Quiz Page Screenshot](/documents/quiz-page-screenshot.png)
 
 #### The Quote Area
 - Displays a randomly generated quote from friends.  This quote serves as a quiz question.
 - Because the quote is random this means no two quiz rounds are the same and the user can have a different experience each time.
->Quote Screenshot
+
+![Quote Screenshot](/documents/quote-screenshot.png)
 
 #### The Answer Buttons
 - There is one button for each character.  Each character serves as a possible answer.
 - Each button contains the character's name and an image, so infrequent viewers of the show can still play without knowing each character’s name.
 - Clicking a button will trigger an alert telling the user whether they were correct or not and generate a new quote.
->Buttons Screenshot
+
+![Answer Buttons on Mobile Screenshot](/documents/mobi-answer-buttons.png)
 
 #### The Score Area
 - Has score totals for correct and incorrect answers at the bottom which keep the score as new quotes are generated.
 - New quotes will be generated as the user clicks one of the six buttons until the user has answered a total of ten questions, at which point a message containing their scores out of ten will be displayed.
->Score Screenshot
+
+![Score Area Screenshot](/documents/scores-screenshot.png)
 
 ## Testing
 > (REWRITE PRIOR TO SUBMITTING AFTER MENTOR CALL) Each function tested as written, using console.log for complex ones and the function in full for shorter ones.  Frequently opened index.html in live server to ensure everything was working as intended and made changes as needed.  Eg. removed event listener from inside display question function and added globally as the alert for every question answered was being added to the button each time, globally adding the event listener fixed this.  Adding images to character buttons broke javascript so added them as background image instead and learned how to add font borders and push button text down to see character names better then.  Changed quiz end from 10 correct answers to 10 questions after feedback from partner and family that it can take a long time to get 10 right.
@@ -83,16 +88,18 @@ The color scheme was chosen to remind the user of the colors used in the show an
 #### Color palette 
 The specific color palette used on the website was adapted from one found on [Pinterest](https://www.pinterest.ie/pin/344877283958852981/).
 
->Palette screenshot here
+![Screenshot of Color Palette](/documents/colors-screenshot.png)
 
 
 ## Typography
 ### Main Font
->font screenshot
+
+![Main Font Screenshot](/documents/rubik-font-screenshot.png)
 
 Rubik from Google Fonts was used as the main font of the website to ensure maximum readability for the user.
 ### Logo Font
->Font Screenshot
+
+![Logo Font Screenshot](/documents/gloria-font-screenshot.png)
 
 Gloria Hallelujah from Google Fonts was used in the header and buttons as well as any time the show's name was mentioned as it bears a close resemblance to the show's font.
 
@@ -104,7 +111,8 @@ Gloria Hallelujah from Google Fonts was used in the header and buttons as well a
 
 The live link can be found [here](https://rachelfromireland.github.io/friends-quote-quiz/).
 
-Future improvements
+## Future improvements
+- In the future, I would like to be able to implement a feature that tracks the user scores if multiple quiz rounds are taken.
 
 ## Credits
 ### Content
