@@ -165,6 +165,39 @@ button:hover {
   padding: 15px;
 }
 
+/*  Modal Styles  - Learned from a W3Schools article - link in README  */
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 99;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(29, 18, 56, 0.5);
+}
+
+#modal-message {
+  background-color: #d2c385;
+  margin: 15% auto;
+  padding: 20px;
+  border: 1px solid #9c8cd4;
+  width: 80%;
+}
+
+.close-modal {
+  color: #1d1238;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.close-modal:hover {
+  color: #9c8cd4;
+  text-decoration: none;
+  cursor: pointer;
+}
+
 /*  Media Query to increase question text on a larger screen  */
 /*  Tablets and up - 768px plus  */
 @media screen and (min-width: 768px) {

@@ -149,10 +149,14 @@ function addWrongAnswer() {
  */
 function checkAnswer(userAnswer, answer) {
   if (userAnswer === answer) {
-    alert(`That's right! That was ${answer}!`);
+    // alert(`That's right! That was ${answer}!`);
+    userMessage(`That's right! That was ${answer}!`);
     addScore();
   } else {
-    alert(
+    //  alert(
+    //   `Whoops, ${answer} said that! \nMaybe you need another rewatch of Friends!`
+    // );
+    userMessage(
       `Whoops, ${answer} said that! \nMaybe you need another rewatch of Friends!`
     );
     addWrongAnswer();
@@ -178,7 +182,10 @@ function progress() {
  * Displays end of quiz alert after 10 correct answers
  */
 function quizOver() {
-  alert(
+  //alert(
+  //    `Well done! You've reached the end of the quiz! \n \n You got ${perfectScore} right out of ${questionCounter}! \nThat's one question for every season of Friends!  \n \n Want to try again? Hit okay to play another round!`
+  // );
+  userMessage(
     `Well done! You've reached the end of the quiz! \n \n You got ${perfectScore} right out of ${questionCounter}! \nThat's one question for every season of Friends!  \n \n Want to try again? Hit okay to play another round!`
   );
   beginAgain();
@@ -188,9 +195,14 @@ function quizOver() {
  * User gets this alert if they get ten out of ten
  */
 function tenForTen() {
-  alert(
+  //  alert(
+  //   `WOW! You got ${perfectScore} out of ${questionCounter}! That's a perfect score!\n  \nMonica would be so proud! \n \n Want to try again? Hit okay to play another round!`
+  //);
+
+  userMessage(
     `WOW! You got ${perfectScore} out of ${questionCounter}! That's a perfect score!\n  \nMonica would be so proud! \n \n Want to try again? Hit okay to play another round!`
   );
+
   beginAgain();
 }
 
@@ -214,3 +226,25 @@ function beginAgain() {
   document.getElementById("welcome").style.display = "block";
   document.getElementById("quiz").style.display = "none";
 }
+
+/**
+ * Functions for modal, delete if not working and go back to alerts
+ */
+function userMessage(message) {
+  let modalMessage = document.getElementById("modal-message");
+  let modal = document.getElementById("modal");
+
+  modalMessage.textContent = message;
+  modal.style.display = "block";
+}
+
+const modalCloseButton = document.getElementById("close-modal");
+modalCloseButton.onclick = function () {
+  modal.style.display = "block";
+};
+
+window.onclick = function (event) {
+  if (event.target == modal) {
+    modal.style.display = "none";
+  }
+};
