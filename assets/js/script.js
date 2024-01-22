@@ -24,10 +24,10 @@ const quizInfo = [
     friend: "Chandler",
     quotes: [
       "I'm funny, right? What do you know? You're a door. You only like knock-knock jokes.",
-      "I'm a gym member. I try to go four times a week, but I've missed the last... twelve-hundred times.",
-      "I tend to keep talking until somebody stops me.",
-      "You know, on second thought, gum would be perfection.",
-      "I can handle this. Handle's my middle name. Actually, it's the middle part of my first name.",
+      //"I'm a gym member. I try to go four times a week, but I've missed the last... twelve-hundred times.",
+      //"I tend to keep talking until somebody stops me.",
+      //"You know, on second thought, gum would be perfection.",
+      // "I can handle this. Handle's my middle name. Actually, it's the middle part of my first name.",
     ],
   },
 
@@ -35,10 +35,10 @@ const quizInfo = [
     friend: "Monica",
     quotes: [
       "And remember, if I'm harsh with you, it's only because you're doing it wrong.",
-      "I've got this uncontrollable need to please people.",
-      "Fine. I'd like to meet this chicken expert. Send the colonel in.",
-      "Welcome to the real world. It sucks. You're gonna love it.",
-      "Lips moving, still talking!",
+      //"I've got this uncontrollable need to please people.",
+      //"Fine. I'd like to meet this chicken expert. Send the colonel in.",
+      //"Welcome to the real world. It sucks. You're gonna love it.",
+      //"Lips moving, still talking!",
     ],
   },
 
@@ -47,9 +47,9 @@ const quizInfo = [
     quotes: [
       " I'm curvy, and I like it",
       "Sup with the wack playstation, sup",
-      "Look at me! I'm Chandler! could I be wearing any more clothes?",
-      "(This friend) doesn't share food!",
-      "Well, the fridge broke. So I had to eat everything.",
+      // "Look at me! I'm Chandler! could I be wearing any more clothes?",
+      // "(This friend) doesn't share food!",
+      //"Well, the fridge broke. So I had to eat everything.",
     ],
   },
 
@@ -58,9 +58,9 @@ const quizInfo = [
     quotes: [
       "No uterus, no opinion.",
       "Oh, I'm sorry. Did my back hurt your knife?",
-      "Oh, that's okay, girls tend to not like me.",
-      "Everyone is getting married or pregnant or promoted and I'm getting coffee! \nAnd it's not even for me!",
-      "Isn't that just kick-you-in-the-crotch, spit-on-your-neck fantastic?",
+      // "Oh, that's okay, girls tend to not like me.",
+      //  "Everyone is getting married or pregnant or promoted and I'm getting coffee! \nAnd it's not even for me!",
+      // "Isn't that just kick-you-in-the-crotch, spit-on-your-neck fantastic?",
     ],
   },
 
@@ -69,9 +69,9 @@ const quizInfo = [
     quotes: [
       "Oh, I wish I could, but I don't want to.",
       "Something is wrong with the left phalange.",
-      "They don't know that we know they know we know.",
-      "See? He's her lobster!",
-      "Meet Princess Consuela Banana Hammock",
+      //  "They don't know that we know they know we know.",
+      //  "See? He's her lobster!",
+      //  "Meet Princess Consuela Banana Hammock",
     ],
   },
 
@@ -80,8 +80,8 @@ const quizInfo = [
     quotes: [
       "You-you-you-you threw my sandwich away? My sandwich? MY SANDWICH?!",
       "Ah. Humor based on my pain.",
-      "I tell you, when I actually die, some people are going to get seriously haunted!",
-      "WE WERE ON A BREAK!",
+      //  "I tell you, when I actually die, some people are going to get seriously haunted!",
+      // "WE WERE ON A BREAK!",
     ],
   },
 ];
@@ -101,7 +101,9 @@ function displayQuestion() {
     ];
 
   //Checking to see if the quote has appeared before and generating a new one while hasQuoteRepeated is true
-  while (hasQuoteRepeated(questionCharacter, randomQuote, questionsAsked)) {
+  while (
+    hasQuoteRepeated(questionCharacter.friend, randomQuote, questionsAsked)
+  ) {
     questionCharacter = quizInfo[Math.floor(Math.random() * quizInfo.length)];
     randomQuote =
       questionCharacter.quotes[
@@ -111,10 +113,13 @@ function displayQuestion() {
 
   //Push quotes that have been asked already into the questionsAsked array
   questionsAsked.push({
-    questionCharacter: questionCharacter,
+    questionCharacter: questionCharacter.friend,
     randomQuote: randomQuote,
   });
   console.log(questionsAsked);
+  console.log(
+    hasQuoteRepeated(questionCharacter.friend, randomQuote, questionsAsked)
+  );
 
   let quoteDiv = document.getElementById("random-quote");
 
@@ -128,18 +133,17 @@ function displayQuestion() {
 /**
  * Function to check if the quote is in the questionsAsked array and so has been asked already
  */
-//function hasQuoteRepeated(friend, quote, questionsAsked) {
-//  for (let i = 0; i < questionsAsked.length; i++) {
-//    if (
-//      questionsAsked[i].questionCharacter === friend &&
-//      questionsAsked[i].randomQuote === quote
-//    ) {
-//      return true;
-//    } else {
-//      return false;
-//    }
-//  }
-//}
+function hasQuoteRepeated(friend, quote, questionsAsked) {
+  for (let i = 0; i < questionsAsked.length; i++) {
+    if (
+      questionsAsked[i].questionCharacter === friend &&
+      questionsAsked[i].randomQuote === quote
+    ) {
+      return true;
+    }
+  }
+  return false;
+}
 
 let activeQuestionCharacter;
 
