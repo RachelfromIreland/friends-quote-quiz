@@ -153,7 +153,7 @@ function checkAnswer(userAnswer, answer) {
     addScore();
   } else {
     userMessage(
-      `Whoops, ${answer} said that! \nMaybe you need another rewatch of Friends!`
+      `Whoops, ${answer} said that! Maybe you need another rewatch of Friends!`
     );
     addWrongAnswer();
   }
@@ -179,7 +179,7 @@ function progress() {
  */
 function quizOver() {
   userMessage(
-    `Well done! You've reached the end of the quiz! \n \n You got ${perfectScore} right out of ${questionCounter}! \nThat's one question for every season of Friends!  \n \n Want to try again? Click or tap anywhere on the screen to play another round!`
+    `Well done! You've reached the end of the quiz! You got ${perfectScore} right out of ${questionCounter}! That's one question for every season of Friends!  Click or tap anywhere on the screen to play another round!`
   );
   beginAgain();
 }
@@ -189,7 +189,7 @@ function quizOver() {
  */
 function tenForTen() {
   userMessage(
-    `WOW! You got ${perfectScore} out of ${questionCounter}! That's a perfect score!\n  \nMonica would be so proud! \n \n Want to try again?  Click or tap anywhere on the screen to play another round!`
+    `WOW! You got ${perfectScore} out of ${questionCounter}! That's a perfect score!  Monica would be so proud!  Click or tap anywhere on the screen to play another round!`
   );
 
   beginAgain();
