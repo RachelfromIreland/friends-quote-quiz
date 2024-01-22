@@ -140,6 +140,8 @@ function hasQuoteRepeated(friend, quote, questionsAsked) {
       return false;
     }
   }
+
+  console.log(hasQuoteRepeated(friend, quote, questionsAsked));
 }
 
 let activeQuestionCharacter;
