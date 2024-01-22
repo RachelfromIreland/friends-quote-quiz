@@ -100,6 +100,41 @@ function displayQuestion() {
       Math.floor(Math.random() * questionCharacter.quotes.length)
     ];
 
+  let questionsAsked = [];
+
+  //Checking to see if the quote has appeared before and generating a new one while hasQuoteRepeated is true
+  while (hasQuoteRepeated(questionCharacter, randomQuote, questionsAsked)) {
+    questionCharacter = quizInfo[Math.floor(Math.random() * quizInfo.length)];
+    randomQuote =
+      questionCharacter.quotes[
+        Math.floor(Math.random() * questionCharacter.quotes.length)
+      ];
+
+    console.log(questionsAsked);
+  }
+
+  //Push quotes that have been asked already into the questionsAsked array
+  questionsAsked.push({
+    questionCharacter: questionCharacter,
+    randomQuote: randomQuote,
+  });
+
+  /**
+   * Function to check if the quote is in the questionsAsked array and so has been asked already
+   */
+  function hasQuoteRepeated(friend, quote, questionsAsked) {
+    for (let i = 0; i < questionsAsked.length; i++) {
+      if (
+        questionsAsked[i].questionCharacter === friend &&
+        questionsAsked[i].randomQuote === quote
+      ) {
+        return true;
+      } else {
+        return false;
+      }
+    }
+  }
+
   let quoteDiv = document.getElementById("random-quote");
 
   quoteDiv.innerHTML = randomQuote;
