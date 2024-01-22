@@ -53,9 +53,21 @@ The site can be accessed by this [link](https://rachelfromireland.github.io/frie
 
 #### The Score Area
 - Has score totals for correct and incorrect answers at the bottom which keep the score as new quotes are generated.
-- New quotes will be generated as the user clicks one of the six buttons until the user has answered a total of ten questions, at which point a message containing their scores out of ten will be displayed.
+- The score resets every time a new quiz is started.
 
 ![Score Area Screenshot](/documents/scores-screenshot.png)
+
+#### Messages for the User
+- The quiz uses modal popups to communicate with the user.  The popups can be closed by clicking anywhere on the screen for accessibility.
+- The popups appear after each question to inform the user if they were correct or incorrect, and if incorrect then who said the quote.
+
+![Answer Message Popup Screenshot](/documents/answer-message.png)
+
+- They also appear at the end of the quiz to inform the user of their score, and to inform them that clicking anywhere on the screen will start the quiz again.  
+
+![End of Quiz Message Popup Screenshot](/documents/finish-message.png)
+
+- The messages on the models are controlled by the "userMessage" function in Javascript and so function similarly to alerts but with visuals more aligned with the quiz itself.
 
 ## Testing
 > (REWRITE PRIOR TO SUBMITTING AFTER MENTOR CALL) Each function tested as written, using console.log for complex ones and the function in full for shorter ones.  Frequently opened index.html in live server to ensure everything was working as intended and made changes as needed.  Eg. removed event listener from inside display question function and added globally as the alert for every question answered was being added to the button each time, globally adding the event listener fixed this.  Adding images to character buttons broke javascript so added them as background image instead and learned how to add font borders and push button text down to see character names better then.  Changed quiz end from 10 correct answers to 10 questions after feedback from partner and family that it can take a long time to get 10 right.
@@ -68,10 +80,14 @@ The site can be accessed by this [link](https://rachelfromireland.github.io/frie
 - JavaScript
     - No errors were found when passing through the official [Jshint](https://jshint.com/) validator
         - The following metrics were returned:
-            - "There are 9 functions in this file."
+            - "There are 14 functions in this file."
             - "Function with the largest signature takes 2 arguments, while the median is 0."
-            - "Largest function has 6 statements in it, while the median is 3."
+            - "Largest function has 6 statements in it, while the median is 2.5."
             - "The most complex function has a cyclomatic complexity value of 4 while the median is 1."
+- Accessibility
+        - The site was tested for accessibility using Lighthouse.  The results are below:
+
+![Lighthouse Scores Screenshot](/documents/lighthouse-screenshot.png)
 
 
 ## Technologies Used
@@ -113,6 +129,7 @@ The live link can be found [here](https://rachelfromireland.github.io/friends-qu
 
 ## Future improvements
 - In the future, I would like to be able to implement a feature that tracks the user scores if multiple quiz rounds are taken.
+- I would also like to prevent quotes from showing up more than once in the same quiz.  As it is random two identical quotes can occasionally generate one after the other, which could potentially confuse users.
 
 ## Credits
 ### Content
@@ -120,10 +137,12 @@ The live link can be found [here](https://rachelfromireland.github.io/friends-qu
 - I learned how to add an event listener to elements by class after reading a blog post by [Borislav Hadzhiev](https://bobbyhadz.com/blog/javascript-add-event-listener-to-all-elements-with-class).
 - I learned how to add a border to a font using webkit-text-stroke after reading this question submitted on [StackOverFlow](https://stackoverflow.com/questions/2570972/css-font-border).
 
+- The HTML, styling and functions of the modal messages were inspired by an article on [W3Schools](https://www.w3schools.com/howto/howto_css_modals.asp) after testing showed alerts didn't fit the style of the quiz.
+
 ### Media
 All images for the character buttons were taken from the Television and Film Character Encyclopaedia Site:
 
-[Monica Character Image](https://www.tafce.com/index.php?title=Monica_Geller)
+[Monica Geller Image](https://www.tafce.com/index.php?title=Monica_Geller)
 
 [Phoebe Buffay Image](https://www.tafce.com/index.php?title=Phoebe_Buffay)
 
@@ -137,7 +156,7 @@ All images for the character buttons were taken from the Television and Film Cha
 
 The logo and favicon image were a free download from HiClipArt.
 
-[Favicon and Logo](https://www.hiclipart.com/free-transparent-background-png-clipart-jzfzc/download)
+[Favicon and Logo Image](https://www.hiclipart.com/free-transparent-background-png-clipart-jzfzc/)
 
 ## Tools
 - Paint 3D was used to make all character images the same size.
