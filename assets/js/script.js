@@ -87,8 +87,23 @@ const quizInfo = [
   },
 ];
 
-let questionCounter = 0;
+//Declaring array to be filled as questions are asked to prevent repeat questions in displayQuestion function
 let questionsAsked = [];
+
+//Declaring variable to check the friend matching the question matches the friend on the button clicked by the user
+let activeQuestionCharacter;
+
+//Declaring answer buttons to add an event listener
+let answerButtons = document.getElementsByClassName("answer-button");
+
+//Declaring variables for tracking progress and user message functions
+let perfectScore = parseInt(document.getElementById("answers").innerText);
+let questionCounter = 0;
+
+//Declaring modal variables
+let modalMessage = document.getElementById("modal-message");
+let modal = document.getElementById("modal");
+let modalCloseButton = document.getElementById("close-modal");
 
 /**
  * Function to pick a character at random and then one of their quotes at random and display in the random quote div.
@@ -119,10 +134,8 @@ function displayQuestion() {
     randomQuote: randomQuote,
   });
 
-  console.log(questionsAsked);
-
+  //Add random quote text to quote div, assign friend from question to activeQuestionCharacter variable, and increment questionCounter variable by one
   let quoteDiv = document.getElementById("random-quote");
-
   quoteDiv.innerHTML = randomQuote;
 
   activeQuestionCharacter = questionCharacter.friend;
@@ -145,21 +158,15 @@ function hasQuoteRepeated(friend, quote, questionsAsked) {
   return false;
 }
 
-let activeQuestionCharacter;
-
 /**
  * Code for answer button event listener
  * Adding event listeners to class learned from a blog post from Borislav Hadzhiev - linked in README
  */
-let answerButtons = document.getElementsByClassName("answer-button");
-
 for (let answerButton of answerButtons) {
   answerButton.addEventListener("click", function () {
     checkAnswer(answerButton.innerText, activeQuestionCharacter);
   });
 }
-
-let perfectScore = parseInt(document.getElementById("answers").innerText);
 
 /**
  * Increments score by 1 when called
@@ -254,15 +261,7 @@ function beginAgain() {
   questionsAsked = [];
 }
 
-/**
- * Functions for modal, learned from a W3Schools article - Link in README
- */
-
-//Declaring modal variables
-let modalMessage = document.getElementById("modal-message");
-let modal = document.getElementById("modal");
-let modalCloseButton = document.getElementById("close-modal");
-
+// Functions for modal, learned from a W3Schools article - Link in README
 /**
  * Function to display different messages to the user, functions like an alert when called
  */
@@ -271,12 +270,16 @@ function userMessage(message) {
   modal.style.display = "block";
 }
 
-//Click event for the close button to hide the modal when clicked
+/**
+ * Click event for the close button to hide the modal when clicked
+ */
 modalCloseButton.onclick = function () {
   modal.style.display = "none";
 };
 
-//Click event so the user can just click the window to close the modal
+/**
+ * Click event so the user can just click the window to close the modal
+ */
 window.onclick = function (event) {
   if (event.target == modal) {
     modal.style.display = "none";
