@@ -88,7 +88,6 @@ const quizInfo = [
 
 let questionCounter = 0;
 let questionsAsked = [];
-
 /**
  * Function to pick a character at random and then one of their quotes at random and display in the random quote div.
  * Also increments questionCounter variable by 1 and defines activeQuestionCharacter for use globally
@@ -136,9 +135,10 @@ function hasQuoteRepeated(friend, quote, questionsAsked) {
       questionsAsked[i].randomQuote === quote
     ) {
       return true;
+    } else {
+      return false;
     }
   }
-  return false;
 }
 
 let activeQuestionCharacter;
