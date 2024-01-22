@@ -87,6 +87,7 @@ const quizInfo = [
 ];
 
 let questionCounter = 0;
+let questionsAsked = [];
 
 /**
  * Function to pick a character at random and then one of their quotes at random and display in the random quote div.
@@ -100,8 +101,6 @@ function displayQuestion() {
       Math.floor(Math.random() * questionCharacter.quotes.length)
     ];
 
-  let questionsAsked = [];
-
   //Checking to see if the quote has appeared before and generating a new one while hasQuoteRepeated is true
   while (hasQuoteRepeated(questionCharacter, randomQuote, questionsAsked)) {
     questionCharacter = quizInfo[Math.floor(Math.random() * quizInfo.length)];
@@ -110,12 +109,13 @@ function displayQuestion() {
         Math.floor(Math.random() * questionCharacter.quotes.length)
       ];
   }
-  console.log(questionsAsked);
+
   //Push quotes that have been asked already into the questionsAsked array
   questionsAsked.push({
     questionCharacter: questionCharacter,
     randomQuote: randomQuote,
   });
+  console.log(questionsAsked);
 
   let quoteDiv = document.getElementById("random-quote");
 
@@ -141,7 +141,6 @@ function hasQuoteRepeated(friend, quote, questionsAsked) {
     }
   }
 }
-console.log(hasQuoteRepeated);
 
 let activeQuestionCharacter;
 
