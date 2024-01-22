@@ -109,10 +109,8 @@ function displayQuestion() {
       questionCharacter.quotes[
         Math.floor(Math.random() * questionCharacter.quotes.length)
       ];
-
-    console.log(questionsAsked);
   }
-
+  console.log(questionsAsked);
   //Push quotes that have been asked already into the questionsAsked array
   questionsAsked.push({
     questionCharacter: questionCharacter,
