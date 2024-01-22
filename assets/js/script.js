@@ -136,12 +136,9 @@ function hasQuoteRepeated(friend, quote, questionsAsked) {
       questionsAsked[i].randomQuote === quote
     ) {
       return true;
-    } else {
-      return false;
     }
   }
-
-  console.log(hasQuoteRepeated(friend, quote, questionsAsked));
+  return false;
 }
 
 let activeQuestionCharacter;
