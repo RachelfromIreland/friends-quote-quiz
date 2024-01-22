@@ -117,23 +117,6 @@ function displayQuestion() {
     randomQuote: randomQuote,
   });
 
-  /**
-   * Function to check if the quote is in the questionsAsked array and so has been asked already
-   */
-  function hasQuoteRepeated(friend, quote, questionsAsked) {
-    for (let i = 0; i < questionsAsked.length; i++) {
-      if (
-        questionsAsked[i].questionCharacter === friend &&
-        questionsAsked[i].randomQuote === quote
-      ) {
-        return true;
-      } else {
-        return false;
-      }
-    }
-  }
-  console.log(hasQuoteRepeated);
-
   let quoteDiv = document.getElementById("random-quote");
 
   quoteDiv.innerHTML = randomQuote;
@@ -142,6 +125,23 @@ function displayQuestion() {
 
   ++questionCounter;
 }
+
+/**
+ * Function to check if the quote is in the questionsAsked array and so has been asked already
+ */
+function hasQuoteRepeated(friend, quote, questionsAsked) {
+  for (let i = 0; i < questionsAsked.length; i++) {
+    if (
+      questionsAsked[i].questionCharacter === friend &&
+      questionsAsked[i].randomQuote === quote
+    ) {
+      return true;
+    } else {
+      return false;
+    }
+  }
+}
+console.log(hasQuoteRepeated);
 
 let activeQuestionCharacter;
 
