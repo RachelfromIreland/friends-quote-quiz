@@ -47,7 +47,7 @@ The site can be accessed by this [link](https://rachelfromireland.github.io/frie
 #### The Answer Buttons
 - There is one button for each character.  Each character serves as a possible answer.
 - Each button contains the character's name and an image, so infrequent viewers of the show can still play without knowing each character’s name.
-- Clicking a button will trigger an alert telling the user whether they were correct or not and generate a new quote.
+- Clicking a button will trigger a message telling the user whether they were correct or not and generate a new quote.
 
 ![Answer Buttons on Mobile Screenshot](/documents/mobi-answer-buttons.png)
 
@@ -59,7 +59,7 @@ The site can be accessed by this [link](https://rachelfromireland.github.io/frie
 
 #### Messages for the User
 - The quiz uses modal popups to communicate with the user.  The popups can be closed by clicking anywhere on the screen for accessibility.
-- The popups appear after each question to inform the user if they were correct or incorrect, and if incorrect then who said the quote.
+- The popups appear after each question to inform the user if they were correct or incorrect, and if incorrect it lets them know the correct answer.
 
 ![Answer Message Popup Screenshot](/documents/answer-message.png)
 
