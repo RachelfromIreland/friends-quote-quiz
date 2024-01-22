@@ -132,6 +132,7 @@ function displayQuestion() {
       }
     }
   }
+  console.log(hasQuoteRepeated);
 
   let quoteDiv = document.getElementById("random-quote");
 
