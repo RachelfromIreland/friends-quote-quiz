@@ -262,7 +262,7 @@ function resetScores() {
 }
 
 /**
- * Call reset scores function and display welcome message to begin quiz again
+ * Call reset scores function and display welcome message to begin quiz again.  Reset questionsAsked to an empty array
  */
 function beginAgain() {
   resetScores();
