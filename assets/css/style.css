@@ -258,6 +258,10 @@ button:hover {
     font-size: 280%;
   }
 
+  #welcome p {
+    max-height: 60vh;
+  }
+
   #start-button {
     font-size: 150%;
   }
@@ -276,5 +280,15 @@ button:hover {
     padding-top: 240px;
     font-size: 180%;
     margin-top: 25px;
+  }
+}
+
+/*  Larger Desktop Screens - 1280px plus  */
+@media screen and (min-width: 1280px) {
+  .answer-button {
+    width: 200px;
+    height: 250px;
+    padding-top: 265px;
+    font-size: 200%;
   }
 }
