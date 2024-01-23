@@ -271,10 +271,10 @@ button:hover {
   }
 
   .answer-button {
-    width: 200px;
-    height: 250px;
-    padding-top: 265px;
-    font-size: 200%;
+    width: 180px;
+    height: 220px;
+    padding-top: 240px;
+    font-size: 180%;
     margin-top: 25px;
   }
 }
