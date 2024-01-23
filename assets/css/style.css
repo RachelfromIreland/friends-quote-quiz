@@ -258,8 +258,8 @@ button:hover {
     font-size: 280%;
   }
 
-  #welcome p {
-    max-height: 60vh;
+  #welcome {
+    max-height: 100vh;
   }
 
   #start-button {
