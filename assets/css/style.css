@@ -101,7 +101,7 @@ button:hover {
 .answer-button {
   width: 100px;
   height: 150px;
-  padding-top: 180px;
+  padding-top: 190px;
   margin: 15px;
   text-shadow: 1px 1px #d2c385;
   -webkit-text-stroke: 0.5px #d2c385;
@@ -233,7 +233,7 @@ button:hover {
   .answer-button {
     width: 150px;
     height: 200px;
-    padding-top: 180px;
+    padding-top: 230px;
     font-size: 180%;
   }
 }
@@ -267,7 +267,8 @@ button:hover {
   .answer-button {
     width: 200px;
     height: 250px;
-    padding-top: 220px;
+    padding-top: 265px;
     font-size: 200%;
+    margin-top: 25px;
   }
 }
