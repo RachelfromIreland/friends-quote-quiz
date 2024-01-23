@@ -2,7 +2,11 @@
  * Event listener to trigger showQuiz when start button is clicked
  */
 let startButton = document.getElementById("start-button");
-startButton.addEventListener("click", showQuiz);
+try {
+  startButton.addEventListener("click", showQuiz);
+} catch (err) {
+  console.error("There is a problem with the start button event listener");
+}
 
 /**
  * Function which hides welcome message and displays the quiz
@@ -162,10 +166,14 @@ function hasQuoteRepeated(friend, quote, questionsAsked) {
  * Code for answer button event listener
  * Adding event listeners to class learned from a blog post from Borislav Hadzhiev - linked in README
  */
-for (let answerButton of answerButtons) {
-  answerButton.addEventListener("click", function () {
-    checkAnswer(answerButton.innerText, activeQuestionCharacter);
-  });
+try {
+  for (let answerButton of answerButtons) {
+    answerButton.addEventListener("click", function () {
+      checkAnswer(answerButton.innerText, activeQuestionCharacter);
+    });
+  }
+} catch (err) {
+  console.error("The answer button event listener isn't working.");
 }
 
 /**
@@ -191,17 +199,21 @@ function addWrongAnswer() {
  * Checks if the user's answer matches the character from the data array and increment relevant score total
  */
 function checkAnswer(userAnswer, answer) {
-  if (userAnswer === answer) {
-    userMessage(`That's right! That was ${answer}!`);
-    addScore();
-  } else {
-    userMessage(
-      `Whoops, ${answer} said that! Maybe you need another rewatch of Friends!`
-    );
-    addWrongAnswer();
-  }
+  try {
+    if (userAnswer === answer) {
+      userMessage(`That's right! That was ${answer}!`);
+      addScore();
+    } else {
+      userMessage(
+        `Whoops, ${answer} said that! Maybe you need another rewatch of Friends!`
+      );
+      addWrongAnswer();
+    }
 
-  progress();
+    progress();
+  } catch (err) {
+    console.error("There is an error with checkAnswer");
+  }
 }
 
 /**
