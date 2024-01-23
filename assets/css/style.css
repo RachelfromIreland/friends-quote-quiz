@@ -101,14 +101,18 @@ button:hover {
 .answer-button {
   width: 100px;
   height: 150px;
-  padding-top: 180px;
+  padding-right: 0;
+  padding-bottom: 0;
+  padding-left: 0;
+  padding-top: 160px;
   margin: 15px;
+  margin-top: 30px;
   text-shadow: 1px 1px #d2c385;
   -webkit-text-stroke: 0.5px #d2c385;
   color: #1d1238;
   border-radius: 5px;
   touch-action: manipulation;
-  font-size: 120%;
+  font-size: 110%;
 }
 
 /* Learned how to add the text stroke from a question on StackOverflow - linked in README  */
@@ -153,7 +157,7 @@ button:hover {
 
 .scores {
   margin: 20px;
-  margin-bottom: 75px;
+  margin-top: 40px;
   display: flex;
   flex-flow: row wrap;
   justify-content: center;
@@ -234,8 +238,9 @@ button:hover {
   .answer-button {
     width: 150px;
     height: 200px;
-    padding-top: 230px;
+    padding-top: 220px;
     font-size: 180%;
+    margin-top: 40px;
   }
 }
 
