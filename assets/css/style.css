@@ -63,6 +63,7 @@ button {
   font-family: "Gloria Hallelujah", sans-serif;
   border: 2px solid #d2c385;
   margin-top: 20px;
+  touch-action: manipulation;
 }
 
 button:hover {
@@ -100,12 +101,13 @@ button:hover {
 .answer-button {
   width: 100px;
   height: 150px;
-  padding-top: 170px;
+  padding-top: 180px;
   margin: 15px;
   text-shadow: 1px 1px #d2c385;
   -webkit-text-stroke: 0.5px #d2c385;
   color: #1d1238;
   border-radius: 5px;
+  touch-action: manipulation;
 }
 
 /* Learned how to add the text stroke from a question on StackOverflow - linked in README  */
