@@ -108,6 +108,7 @@ button:hover {
   color: #1d1238;
   border-radius: 5px;
   touch-action: manipulation;
+  font-size: 120%;
 }
 
 /* Learned how to add the text stroke from a question on StackOverflow - linked in README  */
