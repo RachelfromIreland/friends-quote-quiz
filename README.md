@@ -11,21 +11,37 @@ The site can be accessed by this [link](https://rachelfromireland.github.io/frie
 ## Contents
 
 * [User Stories](#user-stories)
+    * [First-Time Visitor Goals](#first-time-visitor-goals)
+    * [Returning Visitor Goals](#returning-visitor-goals)
 * [Features](#features)
+    * [The Quiz Heading](#the-quiz-heading)
+    * [The Welcome Message](#the-welcome-message)
+    * [The Quiz Page](#the-quiz-page)
+    * [Messages for the USer](#messages-for-the-user)
 * [Design](#design)
+    * [Wireframes](#wireframes)
+    * [Color Scheme](#color-scheme)
+    * [Typography](#typography)
 * [Testing](#testing)
     * [Manual Testing](#manual-testing)
     * [Validator Testing](#validator-testing)
+    * [Bugs](#bugs)
 * [Technologies Used](#technologies-used)
 * [Deployment](#deployment)
+    * [Deployment to GitHub Pages](#deployment-to-github-pages)
+    * [Local Deployment](#local-deployment)
+* [Future Improvements](#future-improvements)
 * [Credits](#credits)
+    * [Content](#content)
+    * [Media](#media)
 * [Tools](#tools)
+* [Acknowledgments](#acknowledgments)
 
     
 
 ## User Stories
 
-### First Time Visitor Goals:
+### First-Time Visitor Goals:
 - As a First Time Visitor, I want to understand the site’s main purpose at a glance.
 - As a First Time Visitor, I want the quiz to be easy to read and intuitive to navigate to ensure a pleasant user experience.
 - As a First Time Visitor, I want to see clearly whether my answers are correct or incorrect.
@@ -168,12 +184,18 @@ Firefox and Google Chrome on Mac, Windows and mobile, Safari on iPad.
 | Modal Messages to the user | Modals will act in the same way as alerts did throughout testing but will look more visually pleasing to the user, and will display the relevant message after answering each question. | Commented out alert messages and added Modals in their place.  Took the quiz multiple times to check the modal message matched the alert. | The correct messages were generated and displayed matching the CSS styles applied to them. | Pass |
 | Scores Area | The relevant scores figure will increment by 1 as each question is answered and reset if the user takes the quiz again. | Logged scores variables to the console before attaching them to the relevant HTML elements, once attached took the quiz while checking the console to see if HTML text matched console text. | Scores increment correctly and reset to zero when a new quiz is started | Pass |
 
-### Solved Bugs
+In addition to the above tests, the click event listeners and checkAnswer function were tested using Try/Catch in Javascript as they will have the most user interaction.  No errors were reported.
+
+### Bugs
+#### Solved Bugs
 | Bug | Solution |
 | ---| ---|
-| The quiz was generating some quotes multiple times in one quiz, sometimes one after the other.  This would confuse the listener. | Solution: As quiz is generated randomly from the quizData array, needed a way to track which questions had been asked and avoid repeats.  Created an empty array within the displayQuestion function.  Created a hasQuoteRepeated function to return true if the question and character were present in this array, and called this function in the displayQuestion function in a while loop.  This loop would generate another quote if the hasQuoteRepeated function returned true.  Then added .push() to add the quote and the character into the new array.  This is then reset later in the code so the array is empty if the user retakes the quiz.  Tested this method by logging the array to the console and ensuring there were no repeats. |
+| The quiz was generating some quotes multiple times in one quiz, sometimes one after the other.  This would confuse the user. | Solution: As quiz is generated randomly from the quizData array, needed a way to track which questions had been asked and avoid repeats.  Created an empty array within the displayQuestion function.  Created a hasQuoteRepeated function to return true if the question and character were present in this array, and called this function in the displayQuestion function in a while loop.  This loop would generate another quote if the hasQuoteRepeated function returned true.  Then added .push() to add the quote and the character into the new array.  This is then reset later in the code so the array is empty if the user retakes the quiz.  Tested this method by logging the array to the console and ensuring there were no repeats. |
 | Upon first running the quiz clicking an answer button would display multiple alerts of “Correct” or “Incorrect”, one for every question answered so far after loading the quiz. | Removed the answer button event listener from inside the displayQuestion function and instead declared it globally, this stopped alerts from being added to the button each time displayQuestion was called and the correct alert was displayed. |
 | Adding images into the HTML answer button elements resulted in the event listeners and functions not working. | After trying to solve the issue with Javascript and being unable to have every function work as expected, I instead removed the images from the HTML elements and added them as background images in CSS and pushed the character names down for better readability.  This resulted in everything working as intended. |
+
+#### Unsolved Bugs
+No unsolved bugs were detected after testing.
 
 ### Validator Testing
 - HTML
@@ -189,7 +211,7 @@ Firefox and Google Chrome on Mac, Windows and mobile, Safari on iPad.
             - "Function with the largest signature takes 3 arguments, while the median is 0."
             - "Largest function has 10 statements in it, while the median is 3."
             - "The most complex function has a cyclomatic complexity value of 4 while the median is 1."
-    -An image of the result can be found [here](/documents/jshint-validator.png).
+    - An image of the result can be found [here](/documents/jshint-validator.png).
 - Accessibility
         - The site was tested for accessibility using Lighthouse.  The results are below:
 
@@ -255,3 +277,7 @@ The logo and favicon image were a free download from HiClipArt.
 - [CSS Tricks](https://css-tricks.com/snippets/css/a-guide-to-flexbox/) was a good resource to ensure I was using Flexbox correctly.
 - The responsive mockup image was generated using [TechSini](https://techsini.com/multi-mockup/index.php).
 - The wireframes for the project were created using [Wireframe|cc](https://wireframe.cc/).
+
+## Acknowledgments
+- This project was completed with the guidance of my mentor, Rory Patrick Sheridan.  His feedback was invaluable and his guidance made completing this project a very educational experience.
+- User testing was completed by my fiancé, Caolán Curran and my mother, Sylvia McGlinchey.  Their feedback enabled me to improve the site and create a more pleasant user experience.  
