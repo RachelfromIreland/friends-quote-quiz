@@ -199,7 +199,6 @@ button:hover {
   float: right;
   font-size: 50px;
   font-weight: bold;
-  display: none;
 }
 
 .close-modal:hover {
