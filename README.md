@@ -8,6 +8,21 @@ The site can be accessed by this [link](https://rachelfromireland.github.io/frie
 
 ![Responsive Mockup Image](/documents/mockup-image.png)
 
+## Contents
+
+* [User Stories](#user-stories)
+* [Features](#features)
+* [Design](#design)
+* [Testing](#testing)
+    * [Manual Testing](#manual-testing)
+    * [Validator Testing](#validator-testing)
+* [Technologies Used](#technologies-used)
+* [Deployment](#deployment)
+* [Credits](#credits)
+* [Tools](#tools)
+
+    
+
 ## User Stories
 
 ### First Time Visitor Goals:
@@ -53,7 +68,7 @@ The site can be accessed by this [link](https://rachelfromireland.github.io/frie
 - Each button contains the character's name and an image, so infrequent viewers of the show can still play without knowing each character’s name.
 - Clicking a button will trigger a message telling the user whether they were correct or not and generate a new quote.
 
-![Answer Buttons on Mobile Screenshot](/documents/mobi-answer-buttons.png)
+![Answer Buttons on Screenshot](/documents/answer-buttons.png)
 
 #### The Score Area
 - Has score totals for correct and incorrect answers at the bottom which keep the score as new quotes are generated.
@@ -74,7 +89,7 @@ The site can be accessed by this [link](https://rachelfromireland.github.io/frie
 - The messages on the models are controlled by the "userMessage" function in Javascript and so function similarly to alerts but with visuals more aligned with the quiz itself.
 
 ## Design
-## Wireframes
+### Wireframes
 The layout was intended to be simple, and very few changes were made to the wireframe design. Below is the draft of how the welcome message would look.
 
 ![Screenshot of Welcome Message Wireframe](/documents/welcome-wireframe.png)
@@ -148,8 +163,7 @@ Firefox and Google Chrome on Mac, Windows and mobile, Safari on iPad.
 | Start Quiz Button Hover | Hovering over the button will invert the text/border color with the background color. | Hovered over the Start Quiz button. | The colors invert as expected as soon as the mouse hovers. | Pass |
 | Start Quiz Button | Clicking the button will start the quiz. It will also reset the user’s score in the event they are starting again after finishing the quiz. | Clicking on the start quiz button.  Console logging the scores figures when the function is called while testing to check they are reset. | Clicking on the Start Quiz button will display the quiz complete with a quote, and scores are reset to zero. | Pass |
 | Quote Area | A quote will be generated at random and displayed, the user will only see each quote once per quiz. The number of questions asked will be recorded as the question counter variable each time the "displayQuestion" function is triggered. | Clicking the start quiz button and subsequently on the answer buttons until the quiz had finished, repeated the process multiple times.  Logging questions asked array to the console to ensure questions were recorded to avoid repeats. Logged activeQuestionCharacter to the console to ensure the character matched the quote being said. Logged questionCounter to the console to ensure the number increased by 1 each time. | A new quote is generated each time the start or answer buttons are pressed.  This quote is generated at random and once generated it will not be repeated during the ten questions of the quiz. | Pass |
-| Answer Buttons | The user will receive a message informing them whether they were correct or incorrect and the relevant score total will increase by 1.  The quiz ends after 10 clicks of the answer button, so ten questions. | Code was initially written with alerts stating “Correct” and “Incorrect”.  Went through several questions answering with a mixture of correct and incorrect answers and watching both the score and the alert message.  Took the quiz several times to check it ended at the correct point. | The relevant score is increased by 1 and the alert message correctly displayed whether the answer was correct or incorrect.
-The quiz ended each time after the tenth question. | Pass |
+| Answer Buttons | The user will receive a message informing them whether they were correct or incorrect and the relevant score total will increase by 1.  The quiz ends after 10 clicks of the answer button, so ten questions. | Code was initially written with alerts stating “Correct” and “Incorrect”.  Went through several questions answering with a mixture of correct and incorrect answers and watching both the score and the alert message.  Took the quiz several times to check it ended at the correct point. | The relevant score is increased by 1 and the alert message correctly displayed whether the answer was correct or incorrect. The quiz ended each time after the tenth question. | Pass |
 | Answer Buttons Hover | Hovering over the button will invert the font color and the font outline/border color. | Hovered mouse over each answer button | The colors invert as expected as soon as the mouse hovers. | Pass |
 | Modal Messages to the user | Modals will act in the same way as alerts did throughout testing but will look more visually pleasing to the user, and will display the relevant message after answering each question. | Commented out alert messages and added Modals in their place.  Took the quiz multiple times to check the modal message matched the alert. | The correct messages were generated and displayed matching the CSS styles applied to them. | Pass |
 | Scores Area | The relevant scores figure will increment by 1 as each question is answered and reset if the user takes the quiz again. | Logged scores variables to the console before attaching them to the relevant HTML elements, once attached took the quiz while checking the console to see if HTML text matched console text. | Scores increment correctly and reset to zero when a new quiz is started | Pass |
@@ -164,15 +178,18 @@ The quiz ended each time after the tenth question. | Pass |
 ### Validator Testing
 - HTML
   - No errors were returned when passing through the official [W3C validator](https://validator.w3.org/nu/).
+  - An image of the result can be found [here](/documents/html-validator.png).
 - CSS
-    - No errors were found when passing through the official [(Jigsaw)](https://jigsaw.w3.org/css-validator/) validator
+    - No errors were found when passing through the official [(Jigsaw)](https://jigsaw.w3.org/css-validator/) validator.
+    - An image of the result can be found [here](/documents/css-validator.png).
 - JavaScript
     - No errors were found when passing through the official [Jshint](https://jshint.com/) validator
         - The following metrics were returned:
-            - "There are 14 functions in this file."
-            - "Function with the largest signature takes 2 arguments, while the median is 0."
-            - "Largest function has 6 statements in it, while the median is 2.5."
+            - "There are 15 functions in this file."
+            - "Function with the largest signature takes 3 arguments, while the median is 0."
+            - "Largest function has 10 statements in it, while the median is 3."
             - "The most complex function has a cyclomatic complexity value of 4 while the median is 1."
+    -An image of the result can be found [here](/documents/jshint-validator.png).
 - Accessibility
         - The site was tested for accessibility using Lighthouse.  The results are below:
 
@@ -187,7 +204,8 @@ The quiz ended each time after the tenth question. | Pass |
 - Git was used for the version control of the website.
 - GitHub was used to host the code of the website.
 
-## Deployment to GitHub Pages
+## Deployment
+### Deployment to GitHub Pages
 - The site was deployed to GitHub pages. The steps to deploy are as follows:
 - In the GitHub repository, navigate to the Settings tab
 - From the source section drop-down menu, select the Main Branch, then click "Save".
@@ -195,7 +213,7 @@ The quiz ended each time after the tenth question. | Pass |
 
 The live link can be found [here](https://rachelfromireland.github.io/friends-quote-quiz/).
 
-## Local Deployment
+### Local Deployment
 
 To make a local copy of this project, you can clone it. In your IDE Terminal, type the following command to clone my repository:
 
