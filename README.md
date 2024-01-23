@@ -143,7 +143,7 @@ Each device tested the site using the following browsers:
 Firefox and Google Chrome on Mac, Windows and mobile, Safari on iPad.
 
 #### Functionality Tests
-| Feature | Expected Outcome | Testing Performed | Result |
+| Feature | Expected Outcome | Testing Performed | Result | Pass/Fail |
 | ---| ---| ---| ---| ---|
 | Start Quiz Button Hover | Hovering over the button will invert the text/border color with the background color. | Hovered over the Start Quiz button. | The colors invert as expected as soon as the mouse hovers. | Pass |
 | Start Quiz Button | Clicking the button will start the quiz. It will also reset the user’s score in the event they are starting again after finishing the quiz. | Clicking on the start quiz button.  Console logging the scores figures when the function is called while testing to check they are reset. | Clicking on the Start Quiz button will display the quiz complete with a quote, and scores are reset to zero. | Pass |
