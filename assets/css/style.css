@@ -101,10 +101,7 @@ button:hover {
 .answer-button {
   width: 100px;
   height: 150px;
-  padding-right: 0;
-  padding-bottom: 0;
-  padding-left: 0;
-  padding-top: 160px;
+  padding: 160px 0 0 0;
   margin: 15px;
   margin-top: 30px;
   text-shadow: 1px 1px #d2c385;
@@ -247,7 +244,7 @@ button:hover {
 /*  Laptops and up - 992px plus  */
 @media screen and (min-width: 992px) {
   header {
-    font-size: 200%;
+    font-size: 175%;
   }
 
   header img {
@@ -256,10 +253,6 @@ button:hover {
 
   h2 {
     font-size: 280%;
-  }
-
-  #welcome {
-    max-height: 100vh;
   }
 
   #start-button {
@@ -285,6 +278,10 @@ button:hover {
 
 /*  Larger Desktop Screens - 1280px plus  */
 @media screen and (min-width: 1280px) {
+  header {
+    font-size: 200%;
+  }
+
   .answer-button {
     width: 200px;
     height: 250px;
